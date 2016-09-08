@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <%- include head_index -%>
+
+  <body data-bind="style:{width:(intAppWidth())+'px', height:(intAppHeight())+'px'}">
+    
+    <global-header></global-header>
+
+    <!-- ko if: pageName()=='init' -->
+      <!-- placeholder for any components needed to be shown before application initializes -->
+    <!-- /ko -->
+
+    <!-- ko if: pageName()=='404' -->
+    <div class="page">
+      <h1>Not Found</h1>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: pageName()=='home' -->
+    <page-home></page-home>
+    <!-- /ko -->
+
+    <!-- ko if: pageName()=='page1' -->
+    <div class="page">
+      <h1>PAGE 1</h1>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: pageName()=='page2' -->
+    <div class="page">
+      <h1>PAGE 2</h1>
+    </div>
+    <!-- /ko -->
+
+  </body>
+</html>

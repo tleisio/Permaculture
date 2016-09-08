@@ -1,0 +1,48 @@
+html {
+  background:#848484;
+  color:#131313;
+	font-family:'Source Sans Pro',sans-serif;
+  font-size:16px;
+  overflow:hidden;
+}
+body {
+  position:relative;
+  background:#FFF;
+  overflow:auto; 
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight:700;
+}
+hr {
+  border:none;
+  border-bottom:1px solid #DDD;
+}
+
+
+button:hover {
+  cursor:pointer;
+}
+
+header.global {
+  padding:0.5em 1em;
+  background:#EEE;
+  color:#363636;
+  font-size:0.9em;
+}
+
+.page {
+  padding:1em;
+}
+page-home {
+  padding:1em;
+  display:block;
+}
+
+.fw-normal {
+  font-weight:400;
+}
+.clear {
+  clear:both;
+  content:"";
+  display:block; 
+}
