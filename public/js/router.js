@@ -25,11 +25,8 @@ define("router", function() {
         case '/#!/':
             return 'home';
             break;
-        case '/#!/page1':
-            return 'page1';
-            break;
-        case '/#!/page2':
-            return 'page2';
+        case '/#!/process':
+            return 'process';
             break;
         default:
             return '404';

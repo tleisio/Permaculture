@@ -1,8 +1,8 @@
 html {
   background:#848484;
   color:#131313;
-	font-family:'Source Sans Pro',sans-serif;
-  font-size:16px;
+	font-family:'Libre Baskerville', serif;
+  font-size:18px;
   overflow:hidden;
 }
 body {
@@ -11,13 +11,78 @@ body {
   overflow:auto; 
 }
 h1, h2, h3, h4, h5, h6 {
+  font-family:'Source Sans Pro',sans-serif;
+  font-weight:400;
+  letter-spacing:-0.0375em;
+}
+h1 {
+  margin:0 0 0.25em 0;
+  font-size:3.25em;
+  font-weight:700;
+}
+h1 .material-icons {
+  font-size:0.9em;
+  vertical-align:bottom;
+}
+h2 {
+  margin:0 0 0.25em;
+  font-size:2.5em;
+}
+h3 {
+  margin:0 0 0.25em;
+  color:#212121;
+  font-size:1.25em;
+  font-weight:700;
+}
+h4 {
+  color:#212121;
+  font-size:0.95em;
+  font-weight:700;
+  text-transform:uppercase;
+}
+h5 {
+  color:#212121;
+  font-family:'Libre Baskerville', serif;
+  font-size:1em;
+  font-weight:700;
+}
+h6 {
+  color:#212121;
+  font-family:'Libre Baskerville', serif;
+  font-size:1em;
   font-weight:700;
 }
 hr {
+  margin:1em 0;
   border:none;
   border-bottom:1px solid #DDD;
 }
+ul, ol {
+  margin:0.5em 0 0.5em 1.6em;
+}
 
+ol li {
+  margin:0 0 0.375em 0;
+  line-height:1.3em;
+  list-style-type:decimal;
+}
+ol ol li {
+  list-style-type:lower-roman;
+}
+ul li {
+  margin:0 0 0.375em 0;
+  line-height:1.4em;
+  list-style-type:disc;
+}
+ul ul li {
+  font-size:0.95em;
+  line-height:1.3em;
+  list-style-type:circle;
+}
+p {
+  margin:0 0 1em 0;
+  line-height:1.4em;
+}
 
 button:hover {
   cursor:pointer;
@@ -29,11 +94,37 @@ header.global {
   color:#363636;
   font-size:0.9em;
 }
+header.global h1 {
+  margin:0;
+}
+header.global p {
+  margin:0 0 0.125em 0;
+}
+header.global nav ul {
+  margin:0;
+}
+header.global nav li {
+  margin:0 1em 0 0;
+  list-style-type:none;
+  display:block;
+  float:left;
+}
+header.global nav li a {
+  font-family:'Source Sans Pro', sans-serif;
+}
 
 .page {
   padding:1em;
 }
 page-home {
+  max-width:720px;
+  margin:0 auto;
+  padding:1em;
+  display:block;
+}
+page-process {
+  max-width:720px;
+  margin:0 auto;
   padding:1em;
   display:block;
 }
