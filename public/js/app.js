@@ -44,7 +44,7 @@ requirejs(['app','ko','text','controller','router'], function(app, ko, text, con
     ko.components.register('global-header', {require: 'components/global-header/global-header' });
     ko.components.register('page-home', {require: 'components/page-home/page-home' });
     ko.components.register('page-process', {require: 'components/page-process/page-process' });
-    ko.components.register('form-signin', {require: 'components/form-signin/form-signin' });
+    ko.components.register('page-proto', {require: 'components/page-proto/page-proto' });
     console.log("Components registered.");
 
     // Apply bindings

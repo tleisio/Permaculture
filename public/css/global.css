@@ -83,14 +83,21 @@ p {
   margin:0 0 1em 0;
   line-height:1.4em;
 }
-
 button:hover {
+  cursor:pointer;
+}
+input[type="radio"]:hover {
+  cursor:pointer;
+}
+input[type="radio"] + label,
+input[type="checkbox"] + label {
   cursor:pointer;
 }
 
 header.global {
   padding:0.5em 1em;
   background:#EEE;
+  border-bottom:1px solid #DDD;
   color:#363636;
   font-size:0.9em;
 }
@@ -129,6 +136,85 @@ page-process {
   display:block;
 }
 
+/* TOOLBAR */
+.toolbar {
+  padding:0.5em;
+  border:1px solid #CCC;
+}
+.toolbar h1 {
+  font-size:1em;
+}
+
+/* PROTOTYPE PAGE */
+page-proto {
+  padding:1em;
+  background:#EEE;
+  display:block;
+  position:relative;
+}
+page-proto .primary,
+page-proto .companions {
+  max-width:620px;
+}
+
+page-proto .slot {
+  width:150px;
+  height:150px;
+  margin:0 1px 1px 0;
+  border:1px solid #CCC;
+  float:left;
+  position:relative;
+}
+page-proto .slot p {
+  margin:0;
+  text-align:center;
+  position:absolute;
+  bottom:5px;
+  left:0;
+  right:0;
+}
+page-proto .slot-primary {
+  width:300px;
+  height:auto;
+}
+page-proto .slot-primary img {
+  max-width:300px;
+}
+page-proto .slot-primary p {
+  padding:0.25em;
+  background:rgba(255,255,255,0.7);
+  border:1px solid #CCC;
+  font-weight:700;
+}
+
+page-proto .process {
+  width:600px;
+  background:#FFF;
+}
+
+page-proto .feedbacks {
+  width:260px;
+  padding:1em;
+  background:#F6F6F6;
+  border-left:1px solid #DDD;
+  font-size:0.8em;
+  position:absolute;
+  top:0;
+  right:0;
+}
+page-proto .feedback {
+  
+}
+page-proto .feedback h1 {
+  font-size:1.25em;
+}
+page-proto .feedback img {
+  max-width:100%;
+}
+
+
+
+/* MISC */
 .fw-normal {
   font-weight:400;
 }

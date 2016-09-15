@@ -28,6 +28,9 @@ define("router", function() {
         case '/#!/process':
             return 'process';
             break;
+        case '/#!/proto':
+            return 'proto';
+            break;
         default:
             return '404';
     }
