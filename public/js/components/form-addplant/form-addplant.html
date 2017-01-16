@@ -1,0 +1,61 @@
+<!-- HTML here -->
+<h1>Add Plant Form</h1>
+<hr />
+<button data-bind="click:close">Cancel</button>
+<hr />
+
+<form>
+  <div class="field">
+    <label>Common Name</label>
+    <input data-bind="textInput:strCommonName, hasFocus: isPlantNameSelected" />
+    <!-- ko if: strCommonName().length > 0 -->
+    <br />
+    <a href="" data-bind="attr:{href:'http://www.google.com/search?q='+strCommonName()}" target="new">Google search for "<span data-bind="text:strCommonName">xo</span>"</a>
+    <!-- /ko -->
+  </div>
+  <div class="field">
+    <label>Genus</label>
+    <input data-bind="textInput:strGenus" />
+  </div>
+  <div class="field">
+    <label>Epithet</label>
+    <input data-bind="textInput:strEpithet" />
+  </div>
+  <div class="field">
+    <label>Basic Ecosystem</label><br />
+    <input type="radio" id="basic-eco-early-grassland" name="basiceco" value="Early Grassland" data-bind="checked:strEcosystemSuccession" /><label for="basic-eco-early-grassland">Early Grassland</label><br />
+    <input type="radio" id="basic-eco-perennial-grassland" name="basiceco" value="Perennial Grassland" data-bind="checked:strEcosystemSuccession" /><label for="basic-eco-perennial-grassland">Perennial Grassland</label><br />
+    <input type="radio" id="basic-eco-desert-scrub" name="basiceco" value="Desert Scrub" data-bind="checked:strEcosystemSuccession" /><label for="basic-eco-desert-scrub">Desert Scrub</label><br />
+    <input type="radio" id="basic-eco-forest-edge" name="basiceco" value="Forest Edge" data-bind="checked:strEcosystemSuccession" /><label for="basic-eco-forest-edge">Forest Edge</label><br />
+    <input type="radio" id="basic-eco-deciduous-forest" name="basiceco" value="Deciduous Forest" data-bind="checked:strEcosystemSuccession" /><label for="basic-eco-deciduous-forest">Deciduous Forest</label><br />
+    <input type="radio" id="basic-eco-coniferous-forest" name="basiceco" value="Coniferous Forest" data-bind="checked:strEcosystemSuccession" /><label for="basic-eco-coniferous-forest">Coniferous Forest</label><br />
+    <input type="radio" id="basic-eco-peat-bog" name="basiceco" value="Peat Bog" data-bind="checked:strEcosystemSuccession" /><label for="basic-eco-peat-bog">Peat Bog</label><br />
+  </div>
+  <div class="field">
+    <label>Forest Layer</label><br />
+    <input type="radio" id="forest-layer-emergent" name="forestlayer" value="Emergent" /><label for="forest-layer-emergent">Emergent</label><br />
+    <input type="radio" id="forest-layer-canopy" name="forestlayer" value="Canopy" /><label for="forest-layer-canopy">Canopy</label><br />
+    <input type="radio" id="forest-layer-understory" name="forestlayer" value="Understory" /><label for="forest-layer-understory">Understory</label><br />
+    <input type="radio" id="forest-layer-shrub" name="forestlayer" value="Shrub" /><label for="forest-layer-shrub">Shrub</label><br />
+    <input type="radio" id="forest-layer-herb" name="forestlayer" value="Herb" /><label for="forest-layer-herb">Herb</label><br />
+    <input type="radio" id="forest-layer-groundcover" name="forestlayer" value="Groundcover" /><label for="forest-layer-groundcover">Groundcover</label><br />
+    <input type="radio" id="forest-layer-vine" name="forestlayer" value="Vine" /><label for="forest-layer-vine">Vine</label><br />
+    <input type="radio" id="forest-layer-root" name="forestlayer" value="Root" /><label for="forest-layer-root">Root</label><br />
+  </div>
+  <div class="field">
+    <label>Mature Height (in meters)</label>
+    <input type="number" /><br />
+  </div>
+  <div class="field">
+    <label>Mature Width (in meters)</label>
+    <input type="number" /><br />
+  </div>
+  <div class="field">
+
+  </div>
+  <br />
+  <button data-bind="click:addPlant">Add "<span data-bind="text:strCommonName">xo</span>"</button>
+</form>
+
+<p>Don't know much of this info? That's OK!</p>
+<p>Avila is an open, social platform where any member with knowledge can put in missing information.</p>

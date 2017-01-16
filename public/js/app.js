@@ -40,12 +40,17 @@ requirejs(['app','ko','text','controller','router'], function(app, ko, text, con
     var app = new AppVM();
 
     // Register components
-    console.log('Component registration...');
+    console.log('Page and component registration...');
     ko.components.register('global-header', {require: 'components/global-header/global-header' });
     ko.components.register('page-home', {require: 'components/page-home/page-home' });
     ko.components.register('page-process', {require: 'components/page-process/page-process' });
     ko.components.register('page-proto', {require: 'components/page-proto/page-proto' });
-    console.log("Components registered.");
+	ko.components.register('panel-plantdetails', {require: 'components/panel-plantdetails/panel-plantdetails' });
+	// !#page-insertion-point-above
+	ko.components.register('list-plants', {require: 'components/list-plants/list-plants' });
+	ko.components.register('form-addplant', {require: 'components/form-addplant/form-addplant' });
+	// !#component-insertion-point-above
+    console.log("Pages and components registered.");
 
     // Apply bindings
     ko.applyBindings(app);

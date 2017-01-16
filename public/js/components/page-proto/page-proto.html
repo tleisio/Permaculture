@@ -1,16 +1,33 @@
-<p>Note to Tim: use <a href="http://tcpermaculture.com/site/plant-index/">this plant index</a> for starting data.</p>
-<br />
-<p>A <a href="/#!/process">plant selection</a> tool for building optimal permaculture plant guilds.</p>
-<br />
 
+<div class="msgs">
+  <p>Note to Tim: use <a href="http://tcpermaculture.com/site/plant-index/">this plant index</a> for starting data.</p>
+  <p>A <a href="/#!/process">plant selection</a> tool for building optimal permaculture plant guilds.</p>
+</div>
+
+<list-plants params="isAddPlantVisible: isAddPlantVisible, isPlantSelected: isPlantSelected, objSelectedPlant: objSelectedPlant"></list-plants>
+
+<!-- ko if: isAddPlantVisible()==true -->
+<form-addplant data-bind="visible:isAddPlantVisible()" params="isAddPlantVisible: isAddPlantVisible"></form-addplant>
+<!-- /ko -->
+
+<panel-plantdetails params="isPlantSelected: isPlantSelected, objSelectedPlant: objSelectedPlant"></panel-plantdetails>
+
+<div class="clear"></div>
+
+<!--
 <div class="process">
   <section class="primary">
     <h1>1. Select Centerpiece</h1>
     <p></p>
-
+    
     <div class="search">
       <label>Search perennial plants</label>
-      <input type="text" />
+      <div class="autocomplete">
+        <input type="text" data-bind="textInput:strSearch, event:{keypress:searchAutoComplete}" />
+        <ol class="results">
+          <li><input type="radio" id="" name="plantselect" data-bind="value:$data, attr:{id:('plantselect'+$data)}" /><label for="" data-bind="text:$data, attr:{for:('plantselect'+$data)}">xo</label></li>
+        </ol>
+      </div>
       <input type="checkbox" id="search-option-edible" /><label for="search-option-edible">Include only plants with edible uses</label>
     </div>
 
@@ -49,7 +66,6 @@
       <p></p>
     </div>
   </section>
-
   <section class="companions">
     <h1>2. Build out companions.</h1>
     <p>To support a healthy Primary_Plant_Name, you'll need to select plants that fit specific roles.</p>
@@ -85,6 +101,7 @@
     </div>
   </section>
 </div>
+-->
 
 <div class="feedbacks">
   <section class="feedback layers">
@@ -102,8 +119,8 @@
   </section>
   <hr />
   <section class="feedback layers">
-    <h1>Water Tolerance Rating</h1>
-    <p>This diagram tells you how well you're utilizing your vertical space.</p>
+    <h1>Water Tolerance Rating?</h1>
+    <p>Or water "map" of plants?</p>
     <img src="http://placehold.it/300x150" />
   </section>
 </div>

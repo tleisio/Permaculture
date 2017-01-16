@@ -6,8 +6,8 @@ var server;
 
 
 //Middlewares
-//var mongoose = require('mongoose');
-//var configDB = require('./config/database.js');
+var mongoose = require('mongoose');
+var configDB = require('./config/database.js');
 var morgan = require('morgan');
 var ejs = require('ejs');
 var bodyParser = require('body-parser');
@@ -15,7 +15,7 @@ var bodyParser = require('body-parser');
 //var sessions = require('client-sessions');
 
 // DB Config
-//mongoose.connect(configDB.url);
+mongoose.connect(configDB.url);
 
 // App Config
 app.use(morgan('dev'));

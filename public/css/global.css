@@ -1,7 +1,7 @@
 html {
   background:#848484;
-  color:#131313;
-	font-family:'Libre Baskerville', serif;
+  color:#342E37;
+	font-family:'Source Sans Pro', serif;
   font-size:18px;
   overflow:hidden;
 }
@@ -96,28 +96,41 @@ input[type="checkbox"] + label {
 
 header.global {
   padding:0.5em 1em;
-  background:#EEE;
-  border-bottom:1px solid #DDD;
-  color:#363636;
-  font-size:0.9em;
+  background:#E54040;
+  color:#FFF;
+  font-size:0.8em;
 }
 header.global h1 {
   margin:0;
+  font-size:1.125em;
 }
-header.global p {
-  margin:0 0 0.125em 0;
+header.global h1 span {
+  font-size:0.9em;
+  font-weight:400;
 }
-header.global nav ul {
+
+nav.global {
+  margin:0;
+  background:#EE964B;
+  color:#FFF;
+  font-size:0.9em;
+}
+nav.global ul {
   margin:0;
 }
-header.global nav li {
-  margin:0 1em 0 0;
+nav.global li {
+  margin:0 1px 0 0;
   list-style-type:none;
   display:block;
   float:left;
 }
-header.global nav li a {
+nav.global li a {
+  background:#F4D35E;
+  color:#013B4F;
   font-family:'Source Sans Pro', sans-serif;
+}
+nav.global li a:visited {
+  color:#013B4F;
 }
 
 .page {
@@ -152,11 +165,43 @@ page-proto {
   display:block;
   position:relative;
 }
+page-proto .msgs {
+  padding:0.25em 0.5em;
+  border:1px solid #DDD;
+  font-size:0.8em;
+}
+page-proto .msgs p {
+  margin:0;
+}
+
 page-proto .primary,
 page-proto .companions {
   max-width:620px;
 }
 
+page-proto .autocomplete {
+  width:300px;
+  position:relative;
+}
+page-proto .autocomplete > label,
+page-proto .autocomplete > input {
+  display:block;
+}
+page-proto .autocomplete .results {
+  margin:0;
+  position:absolute;
+  top:21px;
+  left:1px;
+  right:1px;
+}
+page-proto .autocomplete .results li {
+  width:100%;
+  margin:0 0 -1px 0;
+  padding:0.25em 1em 0.25em 0.25em;
+  background:#F1F1F1;
+  border:1px solid #CCC;
+  list-style-type:none;
+}
 page-proto .slot {
   width:150px;
   height:150px;
@@ -212,7 +257,95 @@ page-proto .feedback img {
   max-width:100%;
 }
 
+/* LIST - PLANTS */
+list-plants {
+  width:260px;
+  margin:0 1px 0 0;
+  padding:0.25em;
+  background:#FFF;
+  border:1px solid #848484;
+  display:block;
+  position:relative;
+  float:left;
+}
+list-plants h1 {
+  font-size:1em;
+}
+list-plants hr {
+  margin:0.25em 0;
+}
+list-plants p {
+  margin:0;
+}
+list-plants ol {
+  margin:0;
+}
+list-plants ol li {
+  margin:0 0 -1px 0;
+  padding:0;
+  list-style-type:none;
+}
+list-plants li button {
+  width:100%;
+  padding:0.5em;
+  background:#FFF;
+  border:1px solid #CCC;
+  text-align:left;
+}
+list-plants li button.selected {
+  background:#131313;
+  color:#FFF;
+}
 
+
+/* LIST - PLANTS */
+panel-plantdetails {
+  width:260px;
+  margin:0 1px 0 0;
+  padding:0.25em;
+  background:#FFF;
+  border:1px solid #848484;
+  display:block;
+  position:relative;
+  float:left;
+}
+panel-plantdetails h1 {
+  font-size:1em;
+}
+panel-plantdetails hr {
+  margin:0.25em 0;
+}
+
+
+/* FORM - ADD PLANT */
+form-addplant {
+  width:260px;
+  margin:0 1px 0 0;
+  padding:0.25em;
+  background:#FFF;
+  border:1px solid #848484;
+  display:block;
+  position:relative;
+  float:left;
+}
+form-addplant h1 {
+  font-size:1em;
+}
+form-addplant hr {
+  margin:0.25em 0;
+}
+form-addplant .field {
+  margin:0 0 1em 0;
+}
+form-addplant .field a {
+  font-size:0.7em;
+}
+form-addplant label {
+  font-size:0.8em;
+}
+form-addplant p {
+  margin:0;
+}
 
 /* MISC */
 .fw-normal {

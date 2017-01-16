@@ -1,0 +1,24 @@
+<!-- HTML here -->
+<h1>Full Plant List</h1>
+<hr />
+<div class="tb">
+  <button data-bind="click:addPlant">Add Plant</button>
+</div>
+<hr />
+
+<!-- ko if: arrPlants().length==0 -->
+<p>There are no plants in our database! :(</p>
+<!-- /ko -->
+
+<!-- ko if: arrPlants().length>=1 -->
+<ol>
+  <!-- ko foreach: arrPlants -->
+  <li>
+    <button data-bind="click:$parent.selectPlant, css:{'selected':isSelected()}">
+      <span data-bind="text:strCommonName">xo</span>
+      <span class="sn">(xo)</span>
+    </button>
+  </li>
+  <!-- /ko -->
+</ol>
+<!-- /ko -->

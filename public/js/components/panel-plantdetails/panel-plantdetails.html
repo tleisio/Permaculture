@@ -1,0 +1,14 @@
+<!-- HTML here -->
+<h1>Plant Details</h1>
+<hr />
+<!-- ko if: isPlantSelected()==true -->
+<h1 data-bind="text:objSelectedPlant().strCommonName">xo</h1>
+<p><span data-bind="text:objSelectedPlant().strGenus">xo</span> <span data-bind="text:objSelectedPlant().strEpithet">xo</span></p>
+<p class="sm" data-bind="text:objSelectedPlant().datLastEditedOn">xo</p>
+<br />
+<p data-bind="text:objSelectedPlant().strEcosystemSuccession">xo</p>
+<button data-bind="click:deletePlant">Delete</button>
+<!-- /ko -->
+<!-- ko if: isPlantSelected()==false -->
+<p>Select a plant above to see details.</p>
+<!-- /ko -->
