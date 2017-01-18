@@ -25,6 +25,7 @@ define(['ko', 'text!./list-plants.html', 'controller'], function(ko, htmlString,
       for (i=0;i<ll;i++) {
         var tempPlant = {};
         tempPlant.strCommonName = arrPlantList[i].local.strCommonName;
+        tempPlant.strScientificName = arrPlantList[i].local.strScientificName;
         tempPlant.strId = arrPlantList[i]._id;
         tempPlant.isSelected = ko.observable(false);
         tempArr.push(tempPlant);
@@ -62,6 +63,10 @@ define(['ko', 'text!./list-plants.html', 'controller'], function(ko, htmlString,
       if (self.isAddPlantVisible() == false) {
         self.isAddPlantVisible(true);
       }
+    }
+
+    self.importPlants = function(data,event) {
+
     }
 
     // Placeholder for cleaning up KO subs, cancelling setTimeouts, etc.

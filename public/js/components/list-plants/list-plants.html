@@ -3,6 +3,7 @@
 <hr />
 <div class="tb">
   <button data-bind="click:addPlant">Add Plant</button>
+  <button data-bind="click:importPlants">Import...</button>
 </div>
 <hr />
 
@@ -16,7 +17,7 @@
   <li>
     <button data-bind="click:$parent.selectPlant, css:{'selected':isSelected()}">
       <span data-bind="text:strCommonName">xo</span>
-      <span class="sn">(xo)</span>
+      <span>(</span><span class="sn" data-bind="text:strScientificName">xo</span><span>)</span>
     </button>
   </li>
   <!-- /ko -->

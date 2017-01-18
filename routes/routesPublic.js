@@ -14,7 +14,7 @@ module.exports = function(router) {
   router.get('/plants/request/:plantId', function(req,res) {
     var plantId = req.params.plantId;
    
-    servicePlants.requestAll(plantId, function(response) {
+    servicePlants.request(plantId, function(response) {
       res.send(response);
     });
   });

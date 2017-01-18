@@ -4,12 +4,37 @@ var mongoose = require('mongoose');
 //schema
 var plantModelSchema = mongoose.Schema({
   local: {
+    // USDA Fields
     strCommonName: { type:String },
-    strGenus: { type:String },
-    strEpithet: { type:String },
+    strScientificName: { type:String },
+    strGrowthHabit: { type:String },
+    arrActiveGrowthPeriod: { type:[String] },
+    isFireResistant: { type:Boolean },
+    strGrowthForm: { type:String },
+    strGrowthRate: { type:String },
+    intHeightAtBaseAgeMax: { type:Number }, // Feet
+    intHeightAtMaturity: { type:Number }, // Feet
+    strLifespan: { type:String },
+    strNitrogenFixation: { type:String },
+    strShapeAndOrientation: { type:String },
+    isAdaptedToCoarseTexturedSoils: { type:Boolean },
+    isAdaptedToMediumTexturedSoils: { type:Boolean },
+    isAdaptedToFineTexturedSoils: { type:Boolean },
+    strMoistureUse: { type:String },
+    intPrecipitationMin: { type:Number },
+    intPrecipitationMax: { type:Number },
+    intRootDepthMin: { type:Number },
+    strShadeTolerance: { type:String },
+    intTemperatureMin: { type:Number },
+    strBloomPeriod: { type:String },
+    strFruitSeedPeriodBegin: { type:String },
+    strFruitSeedPeriodEnd: { type:String },
+    // Avila (custom) fields
     strEcosystemSuccession: { type:String },
     arrAlsoKnownAs: { type:[String] },
-    datLastEditedOn: { type:Date }
+    datLastEditedOn: { type:Date },
+    intBloomPeriodMonthBegin: { type:Number },
+    intBloomPeriodMonthEnd: { type:Number }
   }
 });
 

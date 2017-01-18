@@ -5,6 +5,7 @@
 <hr />
 
 <form>
+  <!-- USDA Fields -->
   <div class="field">
     <label>Common Name</label>
     <input data-bind="textInput:strCommonName, hasFocus: isPlantNameSelected" />
@@ -14,13 +15,106 @@
     <!-- /ko -->
   </div>
   <div class="field">
-    <label>Genus</label>
-    <input data-bind="textInput:strGenus" />
+    <label>Scientific Name</label><br />
+    <input data-bind="textInput:strScientificName" />
   </div>
   <div class="field">
-    <label>Epithet</label>
-    <input data-bind="textInput:strEpithet" />
+    <label>Growth Habit</label><br />
+    <input data-bind="textInput:strGrowthHabit" />
   </div>
+  <div class="field">
+    <label>Active Growth Period</label><br />
+    <input id="activegrowthperiod-spring" type="checkbox" value="spring" data-bind="checked:arrActiveGrowthPeriod" /><label for="activegrowthperiod-spring">Spring</label><br />
+    <input id="activegrowthperiod-summer" type="checkbox" value="summer" data-bind="checked:arrActiveGrowthPeriod" /><label for="activegrowthperiod-summer">Summer</label><br />
+    <input id="activegrowthperiod-fall" type="checkbox" value="fall" data-bind="checked:arrActiveGrowthPeriod" /><label for="activegrowthperiod-fall">Fall</label><br />
+    <input id="activegrowthperiod-winter" type="checkbox" value="winter" data-bind="checked:arrActiveGrowthPeriod" /><label for="activegrowthperiod-winter">Winter</label><br />
+  </div>
+  <div class="field">
+    <label>Fire Resistant</label><br />
+    <input id="fireresistant-yes" type="radio" name="fireresistant" value="yes" data-bind="checked:isFireResistant" /><label for="fireresistant-yes">Yes</label><br />
+    <input id="fireresistant-no" type="radio" name="fireresistant" value="no" data-bind="checked:isFireResistant" /><label for="fireresistant-no">No</label>
+  </div>
+  <div class="field">
+    <label>Growth Form</label><br />
+    <input data-bind="textInput:strGrowthForm" />
+  </div>
+  <div class="field">
+    <label>Growth Rate</label><br />
+    <input data-bind="textInput:strGrowthRate" />
+  </div>
+  <div class="field">
+    <label>Height At Base Age, Max</label><br />
+    <input type="number" data-bind="textInput:intHeightAtBaseAgeMax" />
+  </div>
+  <div class="field">
+    <label>Height At Maturity</label><br />
+    <input type="number" data-bind="textInput:intHeightAtMaturity" />
+  </div>
+  <div class="field">
+    <label>Lifespan</label><br />
+    <input data-bind="textInput:strLifespan" />
+  </div>
+  <div class="field">
+    <label>Nitrogen Fixation</label><br />
+    <input data-bind="textInput:strNitrogenFixation" />
+  </div>
+  <div class="field">
+    <label>Shape And Orientation</label><br />
+    <input data-bind="textInput:strShapeAndOrientation" />
+  </div>
+  <div class="field">
+    <label>Adapted to Coarse Textured Soild</label><br />
+    <input id="adaptedsoils-coarse-yes" type="radio" name="adaptedcoarsesoils" value="yes" data-bind="checked:isAdaptedToCoarseTexturedSoils" /><label for="adaptedsoils-coarse-yes">Yes</label><br />
+    <input id="adaptedsoils-coarse-no" type="radio" name="adaptedcoarsesoils" value="no" data-bind="checked:isAdaptedToCoarseTexturedSoils" /><label for="adaptedsoils-coarse-no">No</label>
+  </div>
+  <div class="field">
+    <label>Adapted to Medium Textured Soild</label><br />
+    <input id="adaptedsoils-medium-yes" type="radio" name="adaptedmediumsoils" value="yes" data-bind="checked:isAdaptedToMediumTexturedSoils" /><label for="adaptedsoils-medium-yes">Yes</label><br />
+    <input id="adaptedsoils-medium-no" type="radio" name="adaptedmediumsoils" value="no" data-bind="checked:isAdaptedToMediumTexturedSoils" /><label for="adaptedsoils-medium-no">No</label>
+  </div>
+  <div class="field">
+    <label>Adapted to Fine Textured Soild</label><br />
+    <input id="adaptedsoils-fine-yes" type="radio" name="adaptedfinesoils" value="yes" data-bind="checked:isAdaptedToFineTexturedSoils" /><label for="adaptedsoils-fine-yes">Yes</label><br />
+    <input id="adaptedsoils-fine-no" type="radio" name="adaptedfinesoils" value="no" data-bind="checked:isAdaptedToFineTexturedSoils" /><label for="adaptedsoils-fine-no">No</label>
+  </div>
+  <div class="field">
+    <label>Moisture Use</label><br />
+    <input data-bind="textInput:strMoistureUse" />
+  </div>
+  <div class="field">
+    <label>Precipitation, Min</label><br />
+    <input type="number" data-bind="textInput:intPrecipitationMin" />
+  </div>
+  <div class="field">
+    <label>Precipitation, Max</label><br />
+    <input type="number" data-bind="textInput:intPrecipitationMax" />
+  </div>
+  <div class="field">
+    <label>Root Depth, Min</label><br />
+    <input type="number" data-bind="textInput:intRootDepthMin" />
+  </div>
+  <div class="field">
+    <label>Shade Tolerance</label><br />
+    <input data-bind="textInput:strShadeTolerance" />
+  </div>
+  <div class="field">
+    <label>Temperature, Min</label><br />
+    <input type="number" data-bind="textInput:intTemperatureMin" />
+  </div>
+  <div class="field">
+    <label>Bloom Period</label><br />
+    <input data-bind="textInput:strBloomPeriod" />
+  </div>
+  <div class="field">
+    <label>Fruit Seed Period Begin</label><br />
+    <input data-bind="textInput:strFruitSeedPeriodBegin" />
+  </div>
+  <div class="field">
+    <label>Fruit Seed Period End</label><br />
+    <input data-bind="textInput:strFruitSeedPeriodEnd" />
+  </div>
+
+  <!-- Avila (custom) Fields -->
   <div class="field">
     <label>Basic Ecosystem</label><br />
     <input type="radio" id="basic-eco-early-grassland" name="basiceco" value="Early Grassland" data-bind="checked:strEcosystemSuccession" /><label for="basic-eco-early-grassland">Early Grassland</label><br />
@@ -31,6 +125,31 @@
     <input type="radio" id="basic-eco-coniferous-forest" name="basiceco" value="Coniferous Forest" data-bind="checked:strEcosystemSuccession" /><label for="basic-eco-coniferous-forest">Coniferous Forest</label><br />
     <input type="radio" id="basic-eco-peat-bog" name="basiceco" value="Peat Bog" data-bind="checked:strEcosystemSuccession" /><label for="basic-eco-peat-bog">Peat Bog</label><br />
   </div>
+
+  <div class="field">
+    <label>Also Known As (multiple common names)</label><input data-bind="textInput:strTempArrAlsoKnownAsItem" /><button data-bind="click:addAlsoKnownAsName">Add</button><br />
+    <ul>
+      <!-- ko if: arrAlsoKnownAs.length==0 -->
+      <li><em>None</em></li>
+      <!-- /ko -->
+      <!-- ko foreach: arrAlsoKnownAs -->
+      <li>
+        <span data-bind="text:$data"></span>
+        <button data-bind="click:$parent.removeAlsoKnownAsName">Remove</button>
+      </li>
+      <!-- /ko -->
+    </ul>
+  </div>
+  <div class="field">
+    <label>Bloom Period Month Begin</label><br />
+    <input type="number" data-bind="textInput:intBloomPeriodMonthBegin" />
+  </div>
+  <div class="field">
+    <label>Bloom Period Month End</label><br />
+    <input type="number" data-bind="textInput:intBloomPeriodMonthEnd" />
+  </div>
+
+  <!--
   <div class="field">
     <label>Forest Layer</label><br />
     <input type="radio" id="forest-layer-emergent" name="forestlayer" value="Emergent" /><label for="forest-layer-emergent">Emergent</label><br />
@@ -42,20 +161,9 @@
     <input type="radio" id="forest-layer-vine" name="forestlayer" value="Vine" /><label for="forest-layer-vine">Vine</label><br />
     <input type="radio" id="forest-layer-root" name="forestlayer" value="Root" /><label for="forest-layer-root">Root</label><br />
   </div>
-  <div class="field">
-    <label>Mature Height (in meters)</label>
-    <input type="number" /><br />
-  </div>
-  <div class="field">
-    <label>Mature Width (in meters)</label>
-    <input type="number" /><br />
-  </div>
-  <div class="field">
+  -->
 
-  </div>
   <br />
+
   <button data-bind="click:addPlant">Add "<span data-bind="text:strCommonName">xo</span>"</button>
 </form>
-
-<p>Don't know much of this info? That's OK!</p>
-<p>Avila is an open, social platform where any member with knowledge can put in missing information.</p>

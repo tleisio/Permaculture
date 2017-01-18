@@ -96,7 +96,7 @@ input[type="checkbox"] + label {
 
 header.global {
   padding:0.5em 1em;
-  background:#E54040;
+  background:#424242;
   color:#FFF;
   font-size:0.8em;
 }
@@ -111,7 +111,8 @@ header.global h1 span {
 
 nav.global {
   margin:0;
-  background:#EE964B;
+  padding:0.5em 1em;
+  background:#131313;
   color:#FFF;
   font-size:0.9em;
 }
@@ -119,18 +120,17 @@ nav.global ul {
   margin:0;
 }
 nav.global li {
-  margin:0 1px 0 0;
+  margin:0 1em 0 0;
   list-style-type:none;
   display:block;
   float:left;
 }
 nav.global li a {
-  background:#F4D35E;
-  color:#013B4F;
+  color:#FFF;
   font-family:'Source Sans Pro', sans-serif;
 }
 nav.global li a:visited {
-  color:#013B4F;
+  color:#FFF;
 }
 
 .page {
